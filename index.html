@@ -11,9 +11,91 @@
                 min-height: 20px;
                 padding: 19px;
             }
+            .row {           
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display:         flex;
+            }
+            .vertical-align {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
         </style>
     </head>
     <body>
+		<div class="container">
+			<div class="row hidden-md hidden-lg" style="padding-top:10px;padding-bottom:10px;">
+                
+                <div class="col-sm-8 col-xs-8 text-center">
+                    <button disabled class="btn btn-default btn-lg">
+                        <span class="glyphicon glyphicon-eye-open" style="color:red;"></span>
+                    </button>
+                    <span class="h1" style="vertical-align:middle;padding-left:10px;">Security</span>
+                </div>
+                <div class="col-sm-4 col-xs-4 text-right">
+                    <button class="btn btn-default btn-lg" onclick='location.href="login.html"'>
+                        Logout <span class="glyphicon glyphicon-log-out"></span>
+                    </button>
+                </div>
+            </div>
+			<div class="row row-eq-height">
+                <div class="col-md-5 hidden-sm hidden-xs text-center">
+                    <img src="image/eye_security_3.png" class="img-responsive">
+                    <span class="h1">Security</span>
+                </div>
+				<div class="col-sm-12 col-xs-12 col-md-7 vertical-align">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="h3">Cameras</span>
+                        </div>
+                        
+                        <div class="panel-body list-group">
+                            <button type="button" class="list-group-item btn-lg" onclick='location.href="video.html"'>
+                                    <span class="glyphicon glyphicon-eye-open"></span>  Backyard
+                            </button>
+                            <button class="list-group-item btn btn-lg" style="background-color:darkgray;" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="true" aria-controls="collapseListGroup1">
+                                    <span class="glyphicon glyphicon-eye-open"></span> Camera Group 1
+                                    <span class="caret"></span>
+                            </button>  
+                            <div style="padding-left:20px" aria-expanded="true" id="collapseListGroup1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+                                <div class="list-group">
+                                    <button type="button" class="list-group-item btn-lg" onclick='location.href="video.html"'>
+                                    <span class="glyphicon glyphicon-eye-open"></span>  Front Door
+                                    </button>
+                                    <button type="button" class="list-group-item btn-lg" onclick='location.href="video.html"'>
+                                        <span class="glyphicon glyphicon-eye-open"></span>  Back Door
+                                    </button>
+                                    <button type="button" class="list-group-item btn-lg" onclick='location.href="video.html"'>
+                                        <span class="glyphicon glyphicon-eye-open"></span>  Side Door
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="list-group-item btn btn-lg" style="background-color:darkgray;" role="button" data-toggle="collapse" href="#collapseListGroup2" aria-expanded="true" aria-controls="collapseListGroup2">
+                                    <span class="glyphicon glyphicon-eye-open"></span> Camera Group 2
+                                    <span class="caret"></span>
+                            </button>  
+                            <div style="padding-left:20px" aria-expanded="true" id="collapseListGroup2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading2">
+                                <div class="list-group">
+                                    <button type="button" class="list-group-item btn-lg" onclick='alert("Connecting to the kitchen camera has failed. Please contact a technician.")'>
+                                    <span class="glyphicon glyphicon-eye-open" style="color:red;"></span>  Kitchen
+                                    </button>
+                                    <button type="button" class="list-group-item btn-lg" onclick='location.href="video.html"'>
+                                        <span class="glyphicon glyphicon-eye-open"></span>  Living Room
+                                    </button>
+                                    <button type="button" class="list-group-item btn-lg" onclick='location.href="video.html"'>
+                                        <span class="glyphicon glyphicon-eye-open"></span>  Hallway
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="list-group-item btn-lg" onclick='location.href="video.html"'>
+                                    <span class="glyphicon glyphicon-eye-open"></span>  Garage
+                            </button>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </body>

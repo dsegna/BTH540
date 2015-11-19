@@ -11,28 +11,62 @@
                 min-height: 20px;
                 padding: 19px;
             }
+            .row {           
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display:         flex;
+            }
+            .vertical-align {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
         </style>
     </head>
     <body>
 		<div class="container">
-			
-			<div class="row"> 
-				<div class="col-md-5 hidden-sm hidden-xs" > <!-- left side of the page/ Hidden when using mobile and tablet-->
-					<img src="image/video/eye_security_5.png" class="img-responsive" alt="ERROR">
-					<font size="30" color="black"><center>Security</center></font>
-				</div>
-				
-				<div class="col-md-7 col-md-12 col-xs-12"> <!-- Right side of the page -->
-					<div class "row"> <!-- Titie -->
-						<img src="image/video/Title.png" class="img-responsive" alt="ERROR">
-					</div>
-					<div class "row"> <!-- Body -->
-						<img src="image/video/Body.png" class="img-responsive" alt="ERROR">
-					</div>
-					<div class "row"> <!-- Bottom -->
-						
-						
-					</div>
+			<div class="row hidden-md hidden-lg" style="padding-top:10px;padding-bottom:10px;">
+                
+                <div class="col-sm-8 col-xs-8 text-center">
+                    <button class="btn btn-default btn-lg" onclick='location.href="index.html"'>
+                        <span class="glyphicon glyphicon-eye-open" style="color:red;"></span>
+                    </button>
+                    <span class="h1" style="vertical-align:middle;padding-left:10px;">Security</span>
+                </div>
+                <div class="col-sm-4 col-xs-4 text-right">
+                    <button class="btn btn-default btn-lg" onclick='location.href="login.html"'>
+                        Logout <span class="glyphicon glyphicon-log-out"></span>
+                    </button>
+                </div>
+            </div>
+			<div class="row row-eq-height">
+                <div class="col-md-5 hidden-sm hidden-xs text-center">
+                    <img src="image/eye_security_3.png" class="img-responsive">
+                    <a href="index.html"><span class="h1">Security</span></a>
+                </div>
+				<div class="col-sm-12 col-xs-12 col-md-7 vertical-align">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="h3">Camera Video</span>
+                        </div>
+                        <div class="panel-body">
+                            <video width="100%" height="100%" controls autoplay loop>
+                                <source src="backyard.mp4" type="video/mp4">
+                            </video>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                                    <button class="btn btn-default btn-lg active">
+                                        <span class="glyphicon glyphicon-facetime-video"></span> Live Steam
+                                    </button>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                                    <button class="btn btn-default btn-lg">
+                                        <span class="glyphicon glyphicon-repeat"></span> By Date
+                                    </button>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>

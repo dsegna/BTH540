@@ -11,36 +11,56 @@
                 min-height: 20px;
                 padding: 19px;
             }
+            .row {           
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display:         flex;
+            }
+            .vertical-align {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
         </style>
     </head>
     <body>
 		<div class="container">
-			
-			<div class="row"> 
-				<div class="col-md-5 hidden-sm hidden-xs" > <!-- left side of the page/ Hidden when using mobile and tablet-->
-					<img src="image/login/eye_security_2&4.png" class="img-responsive" alt="ERROR">
-					<font size="30" color="black"><center>Security</center></font>
-				</div>
-				
-				<div class="col-md-7 col-md-12 col-xs-12"> <!-- Right side of the page -->
-					<div class "row"> <!-- Titie -->
-						<img src="image/login/Title.png" class="img-responsive" alt="ERROR">
-					</div>
-					<div class "row"> <!-- Body -->
-						<img src="image/login/Body.png" class="img-responsive" alt="ERROR">
-						<div class="TopOfImage">
-							<div class="form-group">
-								Email   : <br> <input type="text" name="email" ><br>
-								Password: <br><input type="password" name="Password" ><br>
-								<a href="Welcome.html"><input type="submit" value="LogIn"></a>
-							<div class="form-group">
-						
-						</div>
-					</div>
-					<div class "row"> <!-- Bottom -->
-						
-						<!-- None -->
-					</div>
+			<div class="row hidden-md hidden-lg" style="padding-top:10px;padding-bottom:10px;">
+                
+                <div class="col-sm-8 col-xs-8 text-center">
+                    <button disabled class="btn btn-default btn-lg" style="height:100%">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </button>
+                    <span class="h1" style="vertical-align:middle;padding-left:10px;">Security</span>
+                </div>
+                <div class="col-sm-4 col-xs-4"> 
+                </div>
+            </div>
+			<div class="row row-eq-height">
+                <div class="col-md-5 hidden-sm hidden-xs text-center">
+                    <img src="image/login/eye_security_2&4.png" class="img-responsive">
+                    <span class="h1">Security</span>
+                </div>
+				<div class="col-sm-12 col-xs-12 col-md-7 vertical-align">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="h3">Sign In</span>
+                        </div>
+                        <div class="panel-body">
+                            <form action="index.html">
+                                <div class="form-group">
+                                    <label for="inputEmail">Email:</label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword">Password:</label>
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                    
+                                </div>
+                                <button type="submit" class="btn btn-default padding-top">Log In</button>
+                            </form>
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>
